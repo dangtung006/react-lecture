@@ -1,11 +1,11 @@
 import './App.css';
-
+import List from './components/list';
 function App() {
-  return (
-    <div className="App">
-      this is react app
-    </div>
-  );
+    return (
+        <div className="App">
+            <List />
+        </div>
+    );
 }
 
 export default App;
