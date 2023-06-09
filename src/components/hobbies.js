@@ -7,7 +7,6 @@ const Hobbies = () => {
     ]);
 
     const removeHobbyOpt = (id) => {
-        console.log(id);
         setHobbies((prev) => {
             const item = prev.filter(item => item.id !== id);
             return item;
