@@ -1,0 +1,15 @@
+.center {
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.black-border{
+    border: 1px solid black;
+}
+
+.wrapper {
+    display: flex;
+    flex : 1;
+    align-items: stretch;
+}
