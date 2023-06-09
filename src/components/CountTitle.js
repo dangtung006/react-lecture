@@ -3,7 +3,6 @@ const CountTitle = () => {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
-        console.log("11111111");
         document.title = `You have clicked ${count} times`;
     });
 
