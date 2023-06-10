@@ -1,12 +1,24 @@
+import { Link, Outlet, useSearchParams } from "react-router-dom";
 const Products = () => {
+    const [searchParams, setSearchParams] = useSearchParams({ sortBy: "desc" });
+    const handleChange = (event) => {
+        setSearchParams({
+            sortBy: event.target.value
+        })
+    }
     return (
         <div>
             <h1>Products</h1>
+            <select onChange={handleChange} value={searchParams.get("sortBy")}>
+                <option value="asc">Ascedning</option>
+                <option value="desc">Descending</option>
+            </select>
             <ul>
-                <li>Product 1</li>
-                <li>Product 2</li>
-                <li>Product 3</li>
+                <li><Link to="/products/1">Product 1</Link></li>
+                <li><Link to="/products/2">Product 2</Link></li>
+                <li><Link to="/products/3">Product 3</Link></li>
             </ul>
+            <Outlet />
         </div>
     )
 }
